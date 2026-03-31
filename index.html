@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguino</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/FinCharacter pointing a (Custom).png">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1 id="clonewars-quote"></h1>
+        <p class="subtitle">Wish I could be a fish!</p>
+    </header>
+
+    <!-- DROPDOWN SECTION -->
+    <h2>Useful stuff:</h2>
+    <section class="menu-section">
+        <select id="game-select" onchange="handleSelection(this)">
+            <option value="">Download Links</option>
+            <option value="downloads/bo3.html">Black Ops 3</option>
+            <option value="downloads/jedi-survivor.html">Jedi: Survivor</option>
+            <option value="downloads/minecraft-modpack.html">1.20.1 Forge Modpack Download</option>
+            <option value="downloads/custom-mod.html">Custom Mod</option>
+        </select>
+    </section>
+
+    <!-- FIXED LEGO ICON -->
+    <div class="floating-icon">
+        <a href="https://www.youtube.com/@Just.Penguino" target="_blank">
+            <img src="images/Cool Lego.gif" width="120" height="120" alt="Lego characters">
+        </a>
+    </div>
+
+    <!-- MAIN CONTENT SLIDESHOW -->
+    <main class="gallery">
+        <div class="slideshow-container" aria-label="Featured content slideshow">
+            <button class="slide-arrow left" type="button" onclick="changeSlide(-1)" aria-label="Previous slide">&#10094;</button>
+
+            <div class="slide active">
+                <img src="images/A (53).jpg" width="1280" height="720" alt="Featured image 1">
+            </div>
+
+            <div class="slide">
+                <img src="images/A (64).jpg" width="1280" height="720" alt="Featured image 2">
+            </div>
+
+            <div class="slide">
+                <img src="images/A (67).png" width="1280" height="720" alt="Featured image 3">
+            </div>
+
+            <div class="slide">
+                <a href="https://www.youtube.com/@Just.Penguino" target="_blank" rel="noopener noreferrer">
+                    <img src="images/A (69).jpg" width="1280" height="720" alt="Featured YouTube image">
+                </a>
+            </div>
+
+            <div class="slide">
+                <a href="https://www.youtube.com/@Just.Penguino" target="_blank" rel="noopener noreferrer">
+                    <img src="images/Crossover Episode.png" width="1280" height="720" alt="Crossover episode">
+                </a>
+            </div>
+
+            <div class="slide video-slide">
+                <iframe
+                    src="https://www.youtube.com/embed/2MqfeCjm1lo?si=gA8uPL8PbvXt5bER"
+                    title="Featured video"
+                    loading="eager"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <button class="slide-arrow right" type="button" onclick="changeSlide(1)" aria-label="Next slide">&#10095;</button>
+        </div>
+    </main>
+
+    <!-- SOCIAL LINKS -->
+    <footer class="social-section">
+        <h2>Find Me Online</h2>
+        <p class="social-text">Swap these links for your own YouTube, Discord, and Steam pages.</p>
+        <p class="contact-line">📱 <a href="tel:2562221875">Call or text me if you wanna I guess: 256-222-1875</a></p>
+
+        <div class="social-links">
+            <a class="social-link youtube" href="https://www.youtube.com/@Just.Penguino" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21.8 7.2a2.8 2.8 0 0 0-2-2C18 4.7 12 4.7 12 4.7s-6 0-7.8.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1.8 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.8.5 7.8.5 7.8.5s6 0 7.8-.5a2.8 2.8 0 0 0 2-2 29 29 0 0 0 .4-4.8 29 29 0 0 0-.4-4.8ZM10 15.5V8.5l6 3.5-6 3.5Z" />
+                </svg>
+                <span>YouTube</span>
+            </a>
+
+            <a class="social-link discord" href="https://discord.gg/7bwFHmH2bw" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19.7 5.6a15 15 0 0 0-3.7-1.2l-.2.4c-.1.3-.3.7-.4 1a14 14 0 0 0-6.8 0 10 10 0 0 0-.4-1l-.2-.4a15 15 0 0 0-3.7 1.2C2 8.8 1 12 1.4 15.2a15 15 0 0 0 4.6 2.3l.6-.9.4-.7a9.6 9.6 0 0 1-1.5-.7l.4-.3A10.8 10.8 0 0 0 12 16a10.8 10.8 0 0 0 5.1-1.1l.4.3c-.5.3-1 .6-1.5.7l.4.7.6.9a15 15 0 0 0 4.6-2.3c.5-3.7-.8-6.9-1.9-9.6ZM9.5 13.5c-.8 0-1.4-.7-1.4-1.5s.6-1.5 1.4-1.5 1.4.7 1.4 1.5-.6 1.5-1.4 1.5Zm5 0c-.8 0-1.4-.7-1.4-1.5s.6-1.5 1.4-1.5 1.4.7 1.4 1.5-.6 1.5-1.4 1.5Z" />
+                </svg>
+                <span>Discord</span>
+            </a>
+
+            <a class="social-link steam" href="https://steamcommunity.com/id/CivilizedPenguin/" target="_blank" rel="noopener noreferrer" aria-label="Steam">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.3 5.3a5.7 5.7 0 1 0 0 11.3 5.7 5.7 0 0 0 0-11.3Zm0 2a3.7 3.7 0 1 1 0 7.3 3.7 3.7 0 0 1 0-7.3ZM6.2 14.1l2.8 1.2a3.3 3.3 0 1 0-.8 2l-2.7-1.1a1.4 1.4 0 0 1 .7-2.1Zm5.2-1.4 2.5-3.5 3.3.1-.1 1.7-2.4-.1-1.7 2.3-1.6-.5Z" />
+                </svg>
+                <span>Steam</span>
+            </a>
+
+            <a class="social-link instagram" href="https://www.instagram.com/just.penguino" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2Zm5.2-3.3a1.2 1.2 0 1 1-1.2 1.2 1.2 1.2 0 0 1 1.2-1.2Z" />
+                </svg>
+                <span>Instagram</span>
+            </a>
+
+            <a class="social-link twitch" href="https://www.twitch.tv/civilizedpenguino" target="_blank" rel="noopener noreferrer" aria-label="Twitch">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 3h17v12l-4 4h-4l-2 2H8v-2H4V3Zm2 2v10h3v2.2L11.2 15H16l3-3V5H6Zm4 2h2v5h-2V7Zm5 0h2v5h-2V7Z" />
+                </svg>
+                <span>Twitch</span>
+                <span class="hover-note">ngl twitch sucks but im leaving it here just incase</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/clonewars.js"></script>
+</body>
+</html>
